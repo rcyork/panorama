@@ -4,11 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <title>panorama</title>
 </head>
 
 <body>
 
+  <div class="bgWrap">
+    <video src="nuke.webm" class="fullscreen_bg" loop muted autoplay></video>
+  </div>
+
+  <div class="siteWrap">
+    <div class="fixedNav">
+      <div id="csgoIconWrap" class="navIcon">
+        <img src="csgo_icon.png" alt="home" class="csgoIcon">
+      </div>
+      <div class="navIcon">
+        <i class="fas fa-play-circle fa-3x"></i>
+      </div>
+      <div class="navIcon">
+        <i class="fas fa-briefcase fa-2x"></i>
+      </div>
+      <div class="navIcon">
+        <i class="fas fa-tv fa-2x"></i>
+      </div>
+      <div class="navIcon">
+        <i class="fas fa-shield-alt fa-2x"></i>
+      </div>
+      <div class="navIcon">
+        <i class="fas fa-cog fa-2x"></i>
+      </div>
+      <div id="quitIconWrap" class="navIcon">
+        <i class="fas fa-power-off fa-2x"></i>
+      </div>
+    </div>
+
+    <div class="newsAndInfo"></div>
+
+    <div class="socialBlade"></div>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
