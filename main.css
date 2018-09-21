@@ -1,9 +1,19 @@
 :root {
-  --transparent: rgba(255, 255, 255, 0.25);
+  --transparent: rgba(0, 0, 0, 0.15);
 }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.mb_10 {
+  margin-bottom: 10px;
 }
 
 .fas {
@@ -11,7 +21,7 @@
 }
 
 .bgWrap {
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   display: grid;
   position: fixed;
@@ -67,6 +77,68 @@
 
 .newsAndInfo {
   height: 100vh;
+  padding: 40px;
+}
+
+.newsWrap {
+  width: 500px;
+  background: var(--transparent);
+  padding: 10px 20px 20px;
+  overflow: hidden;
+}
+
+.scrollingNewsWrap {
+  height: 460px;
+  overflow-y: scroll;
+}
+
+.newsWrap * {
+  color: white; /* makes all text within the news section white */
+}
+
+.newsTitle {
+  font-size: 12px;
+}
+
+.newsCardWrap {
+  position: relative;
+}
+
+.newsCardDetails {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 20px;
+}
+
+#card1Details,
+#card3Details {
+  position: absolute;
+}
+
+.newsCardDateAndTime {
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.newsCardDetailsTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.newsCardDetailsInfo {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#card1Details {
+  top: 160px;
+}
+
+#card2Details {
+  background: rgba(50, 87, 175, 0.85);
+}
+
+#card3Details {
+  top: 183px;
 }
 
 .socialBlade {
