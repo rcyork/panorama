@@ -153,19 +153,35 @@ body {
   border-bottom: 1px solid white;
 }
 
+.infoTabTitles:hover {
+  cursor: pointer;
+}
+
+.infoTabTitle:hover {
+  border-bottom: 2px solid white;
+}
+
 .infoTabTitle {
   color: white;
   display: inline-block;
   margin-right: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
+}
+
+.infoTabContent {
+  display: none;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.activeTab {
+  border-bottom: 2px solid white;
 }
 
 .carousel {
   position: relative;
-}
-
-.carousel > * {
-  color: white;
 }
 
 .carousel__arrow {
@@ -173,11 +189,17 @@ body {
   top: 50%;
   transform: translateY(-50%);
 
+  color: rgba(255, 255, 255, 0.75);
+
   z-index: 1;
 }
 
+.carousel__arrow--left {
+  left: 10px;
+}
+
 .carousel__arrow--right {
-  right: 0;
+  right: 10px;
 }
 
 .js-carouselBackground {
@@ -185,14 +207,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
-}
-
-.active {
-  display: block;
+  text-align: center;
+  padding-top: 5%;
 }
 
 .js-carouselBackground.item1 {
-  background-image: url(https://picsum.photos/400/160?image=1078);
+  background-image: url(https://picsum.photos/400/160?image=397);
 }
 
 .js-carouselBackground.item2 {
@@ -200,7 +220,56 @@ body {
 }
 
 .js-carouselBackground.item3 {
-  background-image: url(https://picsum.photos/400/160?image=1025);
+  background-image: url(https://picsum.photos/400/160?image=837);
+}
+
+.infoContentTitle {
+  font-size: 22px;
+  margin: 0 0 10px 0;
+}
+
+.infoContentTitle,
+.infoContentText {
+  text-align: left;
+  width: 275px;
+  text-shadow: 1px 1px black;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infoContentText {
+  width: 275px;
+  line-height: 24px;
+  font-weight: 100;
+}
+
+.coupon-bg,
+.store-bg,
+.keys-bg,
+.market-bg {
+  height: 160px;
+}
+
+.coupon-bg {
+  background: linear-gradient(45deg, red, blue);
+}
+
+.store-bg {
+  background: linear-gradient(135deg, orange, orange 60%, cyan);
+}
+
+.keys-bg {
+  background: linear-gradient(45deg, red, orange);
+}
+
+.market-bg {
+  background: linear-gradient(45deg, yellow, orange);
+}
+
+.active,
+.activeImg {
+  display: block;
 }
 
 .socialBlade {

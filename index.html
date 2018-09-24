@@ -80,32 +80,54 @@
 
       <div class="infoWrap">
         <ul class="infoTabTitles mb_10">
-          <li class="infoTabTitle">London 2018</li>
-          <li class="infoTabTitle">Coupons</li>
-          <li class="infoTabTitle">Store</li>
-          <li class="infoTabTitle">Keys</li>
-          <li class="infoTabTitle">Market</li>
+          <li class="infoTabTitle activeTab" data-id="london">London 2018</li>
+          <li class="infoTabTitle" data-id="coupons">Coupons</li>
+          <li class="infoTabTitle" data-id="store">Store</li>
+          <li class="infoTabTitle" data-id="keys">Keys</li>
+          <li class="infoTabTitle" data-id="market">Market</li>
         </ul>
-        <div class="infoTabContent carousel">
-          <i class="fas fa-chevron-circle-left fa-3x carousel__arrow carousel__arrow--left"></i>
-          <i class="fas fa-chevron-circle-right fa-3x carousel__arrow carousel__arrow--right"></i>
-          <div class="js-carouselBackground item1 active">
-            <h4 class="carouselTitle">Play the Pick 'Em Challenge</h4>
-            <p class="carouselText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum.</p>
+        <div class="infoTabContent carousel active" data-id="london">
+          <i class="fas fa-chevron-circle-left fa-2x carousel__arrow carousel__arrow--left"></i>
+          <i class="fas fa-chevron-circle-right fa-2x carousel__arrow carousel__arrow--right"></i>
+          <div class="js-carouselBackground item1 activeImg">
+            <h4 class="infoContentTitle">Play the Pick 'Em Challenge</h4>
+            <p class="infoContentText">risus at ultrices mi tempus imperdiet nulla malesuada</p>
           </div>
           <div class="js-carouselBackground item2">
-            <h4 class="carouselTitle">10 reasons why Hiko is the Jerome Bettis of CS:GO</h4>
-            <p class="carouselText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at.</p>
+            <h4 class="infoContentTitle">10 reasons why Hiko is the Jerome Bettis of CS:GO</h4>
+            <p class="infoContentText">scelerisque felis imperdiet proin fermentum leo vel orci</p>
           </div>
           <div class="js-carouselBackground item3">
-            <h4 class="carouselTitle">Glaive: The pride of Whoville</h4>
-            <p class="carouselText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Lorem donec massa sapien faucibus et molestie ac.</p>
+            <h4 class="infoContentTitle">Glaive: The pride of Whoville</h4>
+            <p class="infoContentText">quam adipiscing vitae proin sagittis nisl rhoncus mattis</p>
           </div>
         </div>
+
+        <div class="infoTabContent pt-15 coupon-bg" data-id="coupons">
+          <h4 class="infoContentTitle">Coupons</h4>
+          <p class="infoContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="infoTabContent pt-15 store-bg" data-id="store">
+          <h4 class="infoContentTitle">Store</h4>
+          <p class="infoContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="infoTabContent pt-15 keys-bg" data-id="keys">
+          <h4 class="infoContentTitle">Keys</h4>
+          <p class="infoContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="infoTabContent pt-15 market-bg" data-id="market">
+          <h4 class="infoContentTitle">Market</h4>
+          <p class="infoContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+        </div>
       </div>
+
     </div>
 
     <div class="socialBlade"></div>
