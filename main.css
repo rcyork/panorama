@@ -12,7 +12,7 @@ body {
   font-family: sans-serif;
 }
 
-.mb_10 {
+.mb-10 {
   margin-bottom: 10px;
 }
 
@@ -273,16 +273,90 @@ body {
 }
 
 .socialBlade {
-  width: 200px;
+  width: 300px;
   height: 100vh;
 
-  margin-right: -100px;
+  margin-right: -220px;
   background: var(--transparent);
 
   transition: all;
   transition-duration: 500ms;
+
+  padding: 10px;
+}
+
+.socialBlade > * {
+  color: white;
 }
 
 .socialBlade:hover {
   margin-right: 0;
+}
+
+.userAccomplishments {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.userAvatar,
+.userGamertag,
+.userMedals {
+  display: inline-block;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.userGamertag {
+  font-size: 16px;
+}
+
+.userDisplayWrap {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  align-content: space-between;
+}
+
+.userMedal {
+  margin-right: 5px;
+}
+
+.userLevelWrap {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.userLevelEmblemWrap {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.userLevelProgressWrap {
+  display: grid;
+  align-content: center;
+}
+
+.userLevelProgressBar {
+  width: 100%;
+}
+
+.userRankWrap {
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+.compWrap,
+.wingmanWrap {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+}
+
+.userCompRankIcon,
+.userWingmanRankIcon {
+  width: 64px;
 }
