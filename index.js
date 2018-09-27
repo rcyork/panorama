@@ -1,49 +1,74 @@
-const infoTabTitlesUl = document.querySelector(".infoTabTitles");
-const infoTabTitleArray = Array.from(infoTabTitlesUl.children);
-const infoTabContentNodeList = document.querySelectorAll(".infoTabContent");
-console.log(infoTabContentNodeList);
-const carouselNodeList = document.querySelectorAll(".js-carouselBackground");
+const infoTabsUl = document.querySelector(".infoTabs");
+const socialTabsUl = document.querySelector(".socialTabs");
+
+const infoTabArray = Array.from(document.querySelectorAll(".infoTab"));
+const socialTabArray = Array.from(document.querySelectorAll(".socialTab"));
+
+const infoContentArray = Array.from(document.querySelectorAll(".infoContent"));
+const socialContentArray = Array.from(
+  document.querySelectorAll(".socialContent")
+);
+const carouselArray = Array.from(
+  document.querySelectorAll(".js-carouselBackground")
+);
 const leftArrow = document.querySelector(".carousel__arrow--left");
 const rightArrow = document.querySelector(".carousel__arrow--right");
 let activeCarouselIndex = 0;
 
 function removeClass(list, option) {
-  console.log(list);
   list.forEach(item => {
     item.classList.remove(option);
   });
 }
 
-function handleInfoTabSwitching(event) {
-  if (event.target.classList.contains("infoTabTitle")) {
-    removeClass(infoTabTitleArray, "activeTab");
+function handleTabSwitching(event) {
+  if (event.target.classList.contains("tab")) {
+    if (event.target.classList.contains("infoTab")) {
+      removeClass(infoTabArray, "activeTab");
+      removeClass(infoContentArray, "active");
+      infoContentArray.some(item => {
+        const idMatches = event.target.dataset.id === item.dataset.id;
+        if (idMatches) {
+          item.classList.add("active");
+        }
+      });
+    } else if (event.target.classList.contains("socialTab")) {
+      removeClass(socialTabArray, "activeTab");
+      removeClass(socialContentArray, "active");
+      socialContentArray.some(item => {
+        const idMatches = event.target.dataset.id === item.dataset.id;
+        if (idMatches) {
+          item.classList.add("active");
+        }
+      });
+    }
+
     event.target.classList.add("activeTab");
-
-    removeClass(infoTabContentNodeList, "active");
-
-    infoTabContentNodeList.forEach(item => {
-      const classesMatch = event.target.dataset.id === item.dataset.id;
-      if (classesMatch) {
-        item.classList.add("active");
-      }
-    });
   }
 }
 
 function handleCarouselLeftClick() {
+  carouselArray.forEach(item => {
+    item.classList.remove("activeImg");
+  });
+
   activeCarouselIndex -= 1;
 
   if (activeCarouselIndex < 0) {
-    activeCarouselIndex = carouselNodeList.length - 1;
+    activeCarouselIndex = carouselArray.length - 1;
   }
 
   showActiveCarouselItem();
 }
 
 function handleCarouselRightClick() {
+  carouselArray.forEach(item => {
+    item.classList.remove("activeImg");
+  });
+
   activeCarouselIndex += 1;
 
-  if (activeCarouselIndex > carouselNodeList.length - 1) {
+  if (activeCarouselIndex > carouselArray.length - 1) {
     activeCarouselIndex = 0;
   }
 
@@ -51,15 +76,14 @@ function handleCarouselRightClick() {
 }
 
 function showActiveCarouselItem() {
-  carouselNodeList.forEach((item, index) => {
-    item.classList.remove("activeImg");
-
+  carouselArray.some((item, index) => {
     if (index === activeCarouselIndex) {
       item.classList.add("activeImg");
     }
   });
 }
 
-infoTabTitlesUl.addEventListener("click", handleInfoTabSwitching);
+infoTabsUl.addEventListener("click", handleTabSwitching);
+socialTabsUl.addEventListener("click", handleTabSwitching);
 leftArrow.addEventListener("click", handleCarouselLeftClick);
 rightArrow.addEventListener("click", handleCarouselRightClick);

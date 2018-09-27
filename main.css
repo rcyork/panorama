@@ -1,5 +1,5 @@
 :root {
-  --transparent: rgba(0, 0, 0, 0.15);
+  --transparent: rgba(0, 0, 0, 0.25);
 }
 
 *,
@@ -10,6 +10,10 @@
 
 body {
   font-family: sans-serif;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
 }
 
 .mb-10 {
@@ -149,26 +153,30 @@ body {
   padding: 10px;
 }
 
-.infoTabTitles {
+.infoTabs {
   border-bottom: 1px solid white;
 }
 
-.infoTabTitles:hover {
+.infoTabs:hover,
+.socialTab:hover {
   cursor: pointer;
 }
 
-.infoTabTitle:hover {
+.infoTab:hover {
   border-bottom: 2px solid white;
 }
 
-.infoTabTitle {
+.tab {
   color: white;
+}
+
+.infoTab {
   display: inline-block;
-  margin-right: 10px;
   padding-bottom: 8px;
 }
 
-.infoTabContent {
+.infoContent,
+.socialContent {
   display: none;
 }
 
@@ -176,7 +184,7 @@ body {
   padding-top: 15px;
 }
 
-.activeTab {
+.infoTab.activeTab {
   border-bottom: 2px solid white;
 }
 
@@ -273,10 +281,13 @@ body {
 }
 
 .socialBlade {
+  display: grid;
+  grid-template-rows: max-content max-content 1fr;
+
   width: 300px;
   height: 100vh;
 
-  margin-right: -220px;
+  /* margin-right: -220px; */
   background: var(--transparent);
 
   transition: all;
@@ -289,9 +300,9 @@ body {
   color: white;
 }
 
-.socialBlade:hover {
+/* .socialBlade:hover {
   margin-right: 0;
-}
+} */
 
 .userAccomplishments {
   display: grid;
@@ -304,8 +315,18 @@ body {
   display: inline-block;
 }
 
+.userMedals {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
+}
+
 .mr-10 {
   margin-right: 10px;
+}
+
+.mr-15 {
+  margin-right: 15px;
 }
 
 .userGamertag {
@@ -316,10 +337,6 @@ body {
   display: grid;
   grid-template-rows: max-content max-content;
   align-content: space-between;
-}
-
-.userMedal {
-  margin-right: 5px;
 }
 
 .userLevelWrap {
@@ -359,4 +376,121 @@ body {
 .userCompRankIcon,
 .userWingmanRankIcon {
   width: 64px;
+}
+
+.socialTabs {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+
+.socialTab.fas {
+  /* '.fas' required to override font-awesome default display value of 'inline-block */
+  width: 64px;
+  height: 64px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border-bottom: 4px solid transparent; /* eliminates jank due to content resizing from adding a 4px bottom border on hover */
+}
+
+.socialTab.activeTab {
+  border-bottom: 4px solid white;
+}
+
+.socialTab:hover {
+  border-bottom: 4px solid white;
+}
+
+.socialContent {
+  overflow-y: scroll;
+}
+
+.friendCard {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.friendInfoWrap {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  align-content: center;
+}
+
+.friendGamertag {
+  text-shadow: 1px 1px black;
+}
+
+.friendOnlineStatus {
+  color: lightgray;
+  font-size: 14px;
+}
+
+.nearbyCard {
+  border-bottom: 1px solid white;
+}
+
+.nearbyNav {
+  display: grid;
+  grid-template-columns: auto auto;
+  border-bottom: 1px solid white;
+  padding: 0 10px 10px;
+}
+
+.nearbyLobbyInfoWrap {
+  justify-self: end;
+}
+
+.nearbyNavItem {
+  cursor: pointer;
+}
+
+.lobbyLeader {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+}
+
+.lobbyInfoWrap {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content;
+  align-items: center;
+}
+
+.lobbyLeader {
+  font-size: 14px;
+}
+
+.mapQueueList {
+  color: lightgrey;
+  text-shadow: 1px 1px black;
+  font-size: 12px;
+}
+
+.lobbyRank {
+  height: 20px;
+}
+
+.lobbyRegion {
+  height: 30px;
+}
+
+.lobbyPlayersWrap {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: space-between;
+}
+
+.joinLobby,
+.joinLobby.fas {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.joinLobby:hover,
+.joinLobby.fas:hover {
+  cursor: pointer;
 }

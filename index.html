@@ -14,13 +14,13 @@
 <body>
 
   <div class="bgWrap">
-    <!-- <video src="nuke.webm" class="fullscreen_bg" loop muted autoplay></video> -->
+    <!-- <video src="assests/nuke.webm" class="fullscreen_bg" loop muted autoplay></video> -->
   </div>
 
   <div class="siteWrap">
     <div class="fixedNav">
       <div id="csgoIconWrap" class="navIcon">
-        <img src="csgo_icon.png" alt="home" class="csgoIcon">
+        <img src="assests/csgo_icon.png" alt="home" class="csgoIcon">
       </div>
       <div class="navIcon">
         <i class="fas fa-play-circle fa-3x"></i>
@@ -79,14 +79,14 @@
       </div>
 
       <div class="infoWrap">
-        <ul class="infoTabTitles mb-10">
-          <li class="infoTabTitle activeTab" data-id="london">London 2018</li>
-          <li class="infoTabTitle" data-id="coupons">Coupons</li>
-          <li class="infoTabTitle" data-id="store">Store</li>
-          <li class="infoTabTitle" data-id="keys">Keys</li>
-          <li class="infoTabTitle" data-id="market">Market</li>
+        <ul class="infoTabs mb-10">
+          <li class="tab infoTab mr-10 activeTab" data-id="london">London 2018</li>
+          <li class="tab infoTab mr-10" data-id="coupons">Coupons</li>
+          <li class="tab infoTab mr-10" data-id="store">Store</li>
+          <li class="tab infoTab mr-10" data-id="keys">Keys</li>
+          <li class="tab infoTab mr-10" data-id="market">Market</li>
         </ul>
-        <div class="infoTabContent carousel active" data-id="london">
+        <div class="infoContent carousel active" data-id="london">
           <i class="fas fa-chevron-circle-left fa-2x carousel__arrow carousel__arrow--left"></i>
           <i class="fas fa-chevron-circle-right fa-2x carousel__arrow carousel__arrow--right"></i>
           <div class="js-carouselBackground item1 activeImg">
@@ -103,25 +103,25 @@
           </div>
         </div>
 
-        <div class="infoTabContent pt-15 coupon-bg" data-id="coupons">
+        <div class="infoContent pt-15 coupon-bg" data-id="coupons">
           <h4 class="infoContentTitle">Coupons</h4>
           <p class="infoContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
-        <div class="infoTabContent pt-15 store-bg" data-id="store">
+        <div class="infoContent pt-15 store-bg" data-id="store">
           <h4 class="infoContentTitle">Store</h4>
           <p class="infoContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
-        <div class="infoTabContent pt-15 keys-bg" data-id="keys">
+        <div class="infoContent pt-15 keys-bg" data-id="keys">
           <h4 class="infoContentTitle">Keys</h4>
           <p class="infoContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
-        <div class="infoTabContent pt-15 market-bg" data-id="market">
+        <div class="infoContent pt-15 market-bg" data-id="market">
           <h4 class="infoContentTitle">Market</h4>
           <p class="infoContentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.</p>
@@ -130,7 +130,7 @@
 
     </div>
 
-    <div class="socialBlade">
+    <li class="socialBlade">
       <div class="userProfile">
         <div class="userAccomplishments mb-10">
           <img class="userAvatar mr-10" src="https://picsum.photos/64/64?image=1074"></img>
@@ -157,65 +157,162 @@
 
         <div class="userRankWrap mb-10">
           <div class="compWrap">
-            <img class="userCompRankIcon mr-10" src="global_elite.png">
+            <img class="userCompRankIcon mr-10" src="assests/global_elite.png" title="competitive rank">
             <p class="userCompRankText">The Global Elite</p>
           </div>
 
           <div class="wingmanWrap">
-            <img class="userWingmanRankIcon mr-10" src="global_elite.png">
+            <img class="userWingmanRankIcon mr-10" src="assests/global_elite.png" title="wingman rank">
             <p class="userWingmanRankText">The Global Elite</p>
           </div>
         </div>
       </div>
 
-      <ul class="socialTabs">
-        <li class="socialTab"></li>
-        <li class="socialTab"></li>
-        <li class="socialTab"></li>
-        <li class="socialTab"></li>
+      <ul class="socialTabs mb-10">
+        <li class="tab socialTab fas fa-user fa-2x" data-id='friends'></li>
+        <li class="tab socialTab fas fa-users fa-2x" data-id='nearby'></li>
+        <li class="tab socialTab fas fa-clock fa-2x activeTab" data-id='recent'></li>
+        <li class="tab socialTab fas fa-envelope fa-2x" data-id='messages'></li>
       </ul>
 
-      <div class="socialTabContent friends">
-        <div class="friendCard">
-          <div class="friendAvatar"></div>
-          <p class="friendGamertag">Dale McDaleson</p>
-          <p class="friendOnlineStatus">Online</p>
+      <div class="socialContent" data-id='friends'>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=189">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Dale McDaleson</p>
+            <p class="friendOnlineStatus">Online</p>
+          </div>
         </div>
-        <div class="friendCard">
-          <div class="friendAvatar"></div>
-          <p class="friendGamertag">Klank McThompson</p>
-          <p class="friendOnlineStatus">Online</p>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=1">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Klank McThompson</p>
+            <p class="friendOnlineStatus">Online</p>
+          </div>
         </div>
-        <div class="friendCard">
-          <div class="friendAvatar"></div>
-          <p class="friendGamertag">Kawhi McLaughnerd</p>
-          <p class="friendOnlineStatus">Away</p>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=24">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Kawhi McLaughnerd</p>
+            <p class="friendOnlineStatus">Away</p>
+          </div>
         </div>
-        <div class="friendCard">
-          <div class="friendAvatar"></div>
-          <p class="friendGamertag">Kevin McSnek</p>
-          <p class="friendOnlineStatus">Being Shady</p>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=399">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Kevin McSnek</p>
+            <p class="friendOnlineStatus">Being Shady</p>
+          </div>
         </div>
-        <div class="friendCard">
-          <div class="friendAvatar"></div>
-          <p class="friendGamertag">James McFoulshooter</p>
-          <p class="friendOnlineStatus">Flopping</p>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=490">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">James McFoulshooter</p>
+            <p class="friendOnlineStatus">Flopping</p>
+          </div>
         </div>
-        <div class="friendCard">
-          <div class="friendAvatar"></div>
-          <p class="friendGamertag">Stephen McFootfetishist</p>
-          <p class="friendOnlineStatus">Being Weird</p>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=565">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Stephen McFootfetishist</p>
+            <p class="friendOnlineStatus">Being Weird</p>
+          </div>
         </div>
-        <div class="friendCard">
-          <div class="friendAvatar"></div>
-          <p class="friendGamertag">iGotUrGranola</p>
-          <p class="friendOnlineStatus">Offline</p>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=689">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">iGotUrGranola</p>
+            <p class="friendOnlineStatus">Offline</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=639">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Fakesaker</p>
+            <p class="friendOnlineStatus">Offline</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=989">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Leo</p>
+            <p class="friendOnlineStatus">Offline</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=449">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Lucy</p>
+            <p class="friendOnlineStatus">Offline</p>
+          </div>
         </div>
       </div>
-      <div class="socialTabContent nearby"></div>
-      <div class="socialTabContent recent"></div>
-      <div class="socialTabContent messages"></div>
-    </div>
+      <div class="socialContent" data-id='nearby'>
+        <ul class="nearbyNav pb-10">
+          <div class="nearbyLobbyTypeWrap">
+            <li class="nearbyNavItem fas fa-globe-americas fa-2x mr-15"></li>
+            <li id="nearbyNavWingman" class="nearbyNavItem fas fa-people-carry fa-2x"></li>
+          </div>
+          <div class="nearbyLobbyInfoWrap">
+            <li class="nearbyNavItem fas fa-info-circle fa-2x mr-15"></li>
+            <li class="nearbyNavItem fas fa-redo-alt fa-2x"></li>
+          </div>
+        </ul>
+        <div class="nearbyCard">
+          <div class="lobbyInfoWrap">
+            <h4 class="lobbyLeader">Bob Lob Law</h4>
+            <img class="lobbyRank mr-10" src="assests/master_guardian_2.png">
+            <img class="lobbyRegion" src="assests/usa.png">
+          </div>
+
+          <div class="lobbyPlayersWrap mb-5">
+            <img class="playerAvatar" src="https://picsum.photos/36/36?image=732">
+            <img class="playerAvatar" src="https://picsum.photos/36/36?image=651">
+            <img class="playerAvatar" src="https://picsum.photos/36/36?image=784">
+            <i class="joinLobby fas fa-plus-circle"></i>
+            <i class="joinLobby fas fa-plus-circle"></i>
+          </div>
+
+          <p class="mapQueueList mb-10">Mirage, Cache, Inferno, Train</p>
+        </div>
+        <div class="nearbyCard">
+          <div class="lobbyInfoWrap">
+            <h4 class="lobbyLeader">Ted Danson</h4>
+            <img class="lobbyRank mr-10" src="assests/silver_4.png">
+            <img class="lobbyRegion" src="assests/canada.png">
+          </div>
+
+          <div class="lobbyPlayersWrap mb-5">
+            <img class="playerAvatar" src="https://picsum.photos/36/36?image=974">
+            <img class="playerAvatar" src="https://picsum.photos/36/36?image=1001">
+            <i class="joinLobby fas fa-plus-circle"></i>
+            <i class="joinLobby fas fa-plus-circle"></i>
+            <i class="joinLobby fas fa-plus-circle"></i>
+          </div>
+
+          <p class="mapQueueList mb-10">Cache, Inferno, Dust II</p>
+        </div>
+        <div class="nearbyCard">
+          <div class="lobbyInfoWrap">
+            <h4 class="lobbyLeader">Gordon Hayward</h4>
+            <img class="lobbyRank mr-10" src="assests/gold_nova_2.png">
+            <img class="lobbyRegion" src="assests/usa.png">
+          </div>
+
+          <div class="lobbyPlayersWrap mb-5">
+            <img class="playerAvatar" src="https://picsum.photos/36/36?image=1002">
+            <i class="joinLobby fas fa-plus-circle"></i>
+            <i class="joinLobby fas fa-plus-circle"></i>
+            <i class="joinLobby fas fa-plus-circle"></i>
+            <i class="joinLobby fas fa-plus-circle"></i>
+          </div>
+
+          <p class="mapQueueList mb-10">Mirage, Overpass, Cobblestone</p>
+        </div>
+      </div>
+      <div class="socialContent active" data-id='recent'></div>
+      <div class="socialContent" data-id='messages'></div>
+  </div>
   </div>
 
   <script type="text/javascript" src="index.js"></script>
