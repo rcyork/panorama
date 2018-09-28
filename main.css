@@ -1,5 +1,5 @@
 :root {
-  --transparent: rgba(0, 0, 0, 0.25);
+  --transparent: rgba(0, 0, 0, 0.5);
 }
 
 *,
@@ -10,6 +10,23 @@
 
 body {
   font-family: sans-serif;
+}
+
+.bgWrap,
+.fullscreen_bg {
+  min-width: 790px;
+}
+
+.bgWrap,
+.fullscreen_bg,
+.fixedNav,
+.newsAndInfo,
+.socialBlade {
+  min-height: 790px;
+}
+
+.socialBlade:hover > .socialTabs {
+  border-bottom: 1px solid white;
 }
 
 .mb-5 {
@@ -81,7 +98,7 @@ body {
 
 .newsAndInfo {
   height: 100vh;
-  padding: 20px 40px;
+  padding: 20px 0px 20px 40px;
 }
 
 .newsWrap {
@@ -287,7 +304,7 @@ body {
   width: 300px;
   height: 100vh;
 
-  /* margin-right: -220px; */
+  margin-right: -220px;
   background: var(--transparent);
 
   transition: all;
@@ -300,9 +317,9 @@ body {
   color: white;
 }
 
-/* .socialBlade:hover {
+.socialBlade:hover {
   margin-right: 0;
-} */
+}
 
 .userAccomplishments {
   display: grid;
@@ -382,7 +399,6 @@ body {
   display: grid;
   grid-template-columns: repeat(4, max-content);
   justify-content: space-between;
-  border-bottom: 1px solid white;
 }
 
 .socialTab.fas {
@@ -493,4 +509,40 @@ body {
 .joinLobby:hover,
 .joinLobby.fas:hover {
   cursor: pointer;
+}
+
+.addFriendWrap {
+  padding: 0 10px 10px;
+  width: 100%;
+  border-bottom: 1px solid white;
+  margin-bottom: 50px;
+}
+
+.addFriendIcon:hover {
+  cursor: pointer;
+}
+
+.messagesEmptyWrap {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.messagesInfoIcon {
+  display: inline-block;
+  padding: 5px;
+}
+
+.messagesEmptyTextWrap {
+  display: grid;
+  grid-template-rows: max-content max-content;
+}
+
+.messagesTitle {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+.messagesInfo {
+  font-weight: 100;
 }

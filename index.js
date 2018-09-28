@@ -1,3 +1,13 @@
+const bgWrap = document.querySelector(".bgWrap");
+const fullscreenBg = document.querySelector(".fullscreen_bg");
+const bladeTabs = document.querySelectorAll(".socialTab");
+const bladeContent = document.querySelectorAll(".socialContent");
+
+const friendsTab = document.querySelector("#friendsTab");
+const friendsContent = document.querySelector("#friendsContent");
+
+const socialBlade = document.querySelector(".socialBlade");
+
 const infoTabsUl = document.querySelector(".infoTabs");
 const socialTabsUl = document.querySelector(".socialTabs");
 
@@ -47,6 +57,29 @@ function handleTabSwitching(event) {
   }
 }
 
+function handleBackground() {
+  const tallerThan1080 = window.innerHeight > 1080;
+  const widerThan1920 = window.innerWidth > 1920;
+
+  const bigBg = `<img class="fullscreen_bg" src="assests/replacement_bg.jpg">`;
+  const defaultBg = `<img src="assests/pano_still.png" class="fullscreen_bg">`;
+
+  if (tallerThan1080 || widerThan1920) {
+    fullscreenBg.remove();
+    bgWrap.innerHTML = bigBg;
+  } else {
+    bgWrap.innerHTML = defaultBg;
+  }
+}
+
+function handleBlade() {
+  removeClass(bladeTabs, "activeTab");
+  removeClass(bladeContent, "active");
+
+  friendsTab.classList.add("activeTab");
+  friendsContent.classList.add("active");
+}
+
 function handleCarouselLeftClick() {
   carouselArray.forEach(item => {
     item.classList.remove("activeImg");
@@ -83,6 +116,9 @@ function showActiveCarouselItem() {
   });
 }
 
+handleBackground();
+window.addEventListener("resize", handleBackground);
+socialBlade.addEventListener("mouseleave", handleBlade);
 infoTabsUl.addEventListener("click", handleTabSwitching);
 socialTabsUl.addEventListener("click", handleTabSwitching);
 leftArrow.addEventListener("click", handleCarouselLeftClick);

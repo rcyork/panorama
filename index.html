@@ -14,7 +14,7 @@
 <body>
 
   <div class="bgWrap">
-    <!-- <video src="assests/nuke.webm" class="fullscreen_bg" loop muted autoplay></video> -->
+    <img src="assests/pano_still.png" class="fullscreen_bg">
   </div>
 
   <div class="siteWrap">
@@ -169,13 +169,13 @@
       </div>
 
       <ul class="socialTabs mb-10">
-        <li class="tab socialTab fas fa-user fa-2x" data-id='friends'></li>
+        <li id="friendsTab" class="tab socialTab fas fa-user fa-2x activeTab" data-id='friends'></li>
         <li class="tab socialTab fas fa-users fa-2x" data-id='nearby'></li>
-        <li class="tab socialTab fas fa-clock fa-2x activeTab" data-id='recent'></li>
+        <li class="tab socialTab fas fa-clock fa-2x" data-id='recent'></li>
         <li class="tab socialTab fas fa-envelope fa-2x" data-id='messages'></li>
       </ul>
 
-      <div class="socialContent" data-id='friends'>
+      <div id="friendsContent" class="socialContent active" data-id='friends'>
         <div class="friendCard mb-10">
           <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=189">
           <div class="friendInfoWrap">
@@ -310,8 +310,90 @@
           <p class="mapQueueList mb-10">Mirage, Overpass, Cobblestone</p>
         </div>
       </div>
-      <div class="socialContent active" data-id='recent'></div>
-      <div class="socialContent" data-id='messages'></div>
+      <div class="socialContent" data-id='recent'>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=189">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Plop</p>
+            <p class="friendOnlineStatus">Yesterday</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=1">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Baron</p>
+            <p class="friendOnlineStatus">Yesterday</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=24">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Milton</p>
+            <p class="friendOnlineStatus">Yesterday</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=399">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Hellen</p>
+            <p class="friendOnlineStatus">Yesterday</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=490">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Christine</p>
+            <p class="friendOnlineStatus">Sep 1</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=565">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Todd</p>
+            <p class="friendOnlineStatus">Sep 1</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=689">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Jean</p>
+            <p class="friendOnlineStatus">Aug 27</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=639">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Fifo</p>
+            <p class="friendOnlineStatus">Aug 27</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=989">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Cleo</p>
+            <p class="friendOnlineStatus">Aug 27</p>
+          </div>
+        </div>
+        <div class="friendCard mb-10">
+          <img class="friendAvatar mr-10" src="https://picsum.photos/64/64?image=449">
+          <div class="friendInfoWrap">
+            <p class="friendGamertag mb-10">Lucifer</p>
+            <p class="friendOnlineStatus">Aug 27</p>
+          </div>
+        </div>
+      </div>
+      <div class="socialContent" data-id='messages'>
+        <div class="addFriendWrap">
+          <i class="addFriendIcon far fa-plus-square fa-2x" title="Add friend"></i>
+        </div>
+        <div class="messagesEmptyWrap">
+          <div class="messagesInfoIcon fas fa-info-circle fa-2x mr-10"></div>
+          <div class="messagesEmptyTextWrap">
+            <h4 class="messagesTitle mb-10">Friend requests</h4>
+            <p class="messagesInfo">You don't have any pending or sent friend requests</p>
+          </div>
+        </div>
+      </div>
   </div>
   </div>
 
