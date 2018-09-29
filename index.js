@@ -1,5 +1,3 @@
-const bgWrap = document.querySelector(".bgWrap");
-const fullscreenBg = document.querySelector(".fullscreen_bg");
 const bladeTabs = document.querySelectorAll(".socialTab");
 const bladeContent = document.querySelectorAll(".socialContent");
 
@@ -57,21 +55,6 @@ function handleTabSwitching(event) {
   }
 }
 
-function handleBackground() {
-  const tallerThan1080 = window.innerHeight > 1080;
-  const widerThan1920 = window.innerWidth > 1920;
-
-  const bigBg = `<img class="fullscreen_bg" src="assests/replacement_bg.jpg">`;
-  const defaultBg = `<img src="assests/pano_still.png" class="fullscreen_bg">`;
-
-  if (tallerThan1080 || widerThan1920) {
-    fullscreenBg.remove();
-    bgWrap.innerHTML = bigBg;
-  } else {
-    bgWrap.innerHTML = defaultBg;
-  }
-}
-
 function handleBlade() {
   removeClass(bladeTabs, "activeTab");
   removeClass(bladeContent, "active");
@@ -116,8 +99,6 @@ function showActiveCarouselItem() {
   });
 }
 
-handleBackground();
-window.addEventListener("resize", handleBackground);
 socialBlade.addEventListener("mouseleave", handleBlade);
 infoTabsUl.addEventListener("click", handleTabSwitching);
 socialTabsUl.addEventListener("click", handleTabSwitching);

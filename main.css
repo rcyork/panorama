@@ -12,13 +12,13 @@ body {
   font-family: sans-serif;
 }
 
-.bgWrap,
-.fullscreen_bg {
+.siteWrap {
   min-width: 790px;
+  width: 100vw;
+  height: 100vh;
 }
 
-.bgWrap,
-.fullscreen_bg,
+.siteWrap,
 .fixedNav,
 .newsAndInfo,
 .socialBlade {
@@ -41,24 +41,25 @@ body {
   color: white; /* makes all font awesome icons white */
 }
 
-.bgWrap {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  position: fixed;
-  z-index: -100;
-}
-
-.fullscreen_bg {
-  position: fixed;
-  object-fit: cover;
-  bottom: 0;
-  left: 0;
-}
-
 .siteWrap {
+  position: fixed;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
+  background-image: url("assests/pano_still.png");
+  background-size: cover;
+}
+
+@media (min-width: 1920px) {
+  .siteWrap {
+    background-image: url("assests/replacement_bg.jpg");
+  }
+}
+
+@media (min-height: 1080px) {
+  .siteWrap {
+    background-image: url("assests/replacement_bg.jpg");
+    background-position: center center;
+  }
 }
 
 .fixedNav {
