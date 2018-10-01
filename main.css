@@ -12,6 +12,27 @@ body {
   font-family: sans-serif;
 }
 
+.fas {
+  color: white; /* sets all font awesome icons to white */
+}
+
+/* utility classes */
+.u-mb_5 {
+  margin-bottom: 5px;
+}
+
+.u-mb_10 {
+  margin-bottom: 10px;
+}
+
+.u-mr_10 {
+  margin-right: 10px;
+}
+
+.u-mr_15 {
+  margin-right: 15px;
+}
+
 .siteWrap {
   min-width: 790px;
   width: 100vw;
@@ -23,22 +44,6 @@ body {
 .newsAndInfo,
 .socialBlade {
   min-height: 790px;
-}
-
-.socialBlade:hover > .socialTabs {
-  border-bottom: 1px solid white;
-}
-
-.mb-5 {
-  margin-bottom: 5px;
-}
-
-.mb-10 {
-  margin-bottom: 10px;
-}
-
-.fas {
-  color: white; /* makes all font awesome icons white */
 }
 
 .siteWrap {
@@ -322,6 +327,10 @@ body {
   margin-right: 0;
 }
 
+.socialBlade:hover > .socialTabs {
+  border-bottom: 1px solid white;
+}
+
 .userAccomplishments {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -337,14 +346,6 @@ body {
   display: grid;
   grid-template-columns: repeat(4, max-content);
   justify-content: space-between;
-}
-
-.mr-10 {
-  margin-right: 10px;
-}
-
-.mr-15 {
-  margin-right: 15px;
 }
 
 .userGamertag {
@@ -373,6 +374,46 @@ body {
 .userLevelProgressWrap {
   display: grid;
   align-content: center;
+  position: relative;
+}
+
+.hoverCard {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 20px;
+  text-align: left;
+  position: absolute;
+  max-width: 300px;
+  border-radius: 7px;
+  left: -300px;
+  top: 40px;
+  visibility: hidden;
+}
+
+.socialBlade:hover .userLevelProgressWrap:hover .hoverCard {
+  visibility: visible; /* show hoverCard only when the social blade is fully out and the user level is being hovered over*/
+}
+
+.xpTitle {
+  font-size: 18px;
+}
+
+.xpInfo,
+.bonusesInfo,
+.xpExplanation {
+  font-size: 12px;
+  color: darkgray;
+}
+
+.xpInfo {
+  margin-bottom: 20px;
+}
+
+.bonusesInfo {
+  padding-bottom: 10px;
+}
+
+.bonusesInfo {
+  border-bottom: 1px solid grey;
 }
 
 .userLevelProgressBar {
@@ -424,22 +465,22 @@ body {
   overflow-y: scroll;
 }
 
-.friendCard {
+.playerCard {
   display: grid;
   grid-template-columns: max-content 1fr;
 }
 
-.friendInfoWrap {
+.playerInfoWrap {
   display: grid;
   grid-template-rows: max-content max-content;
   align-content: center;
 }
 
-.friendGamertag {
+.playerGamertag {
   text-shadow: 1px 1px black;
 }
 
-.friendOnlineStatus {
+.playerStatus {
   color: lightgray;
   font-size: 14px;
 }
